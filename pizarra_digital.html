@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Pizarra Digital Interactiva</title>
+  </head>
+  <body align='center'>
+    <p>
+      <h1>Pizarra Digital Interactiva</h1>
+    </p>
+    <p>
+      <br>Color 👉
+      <select id = "color_lapiz">
+        <option value="black">Negro </option>
+        <option value="red">Rojo </option>
+        <option value="blue">Azul </option>
+        <option value="lawngreen">Verde </option>
+        <option value="yellow">Amarillo </option>
+        <option value="pink">Rosa </option>
+        <option value="darkorchid">Violeta </option>
+      </select>
+      <br>Tamaño 👉
+      <select id = "tamaño_lapiz">
+        <option value=1>1 px </option>
+        <option value=2>2px </option>
+        <option value=3>3px </option>
+        <option value=4>4px </option>
+        <option value=5>5px</option>
+        <option value=6>6px</option>
+        <option value=7>7px</option>
+      </select>
+      <p><input type="button" value="Limpiar" id="limpiar_lienzo"></p>
+    </p>
+    <p>
+      <br><canvas id="areaDibujo" width="900" height="450" style="border:4px solid black"></canvas>
+    </p>
+    <script src="pizarra_digital.js"></script>
+  </body>
+</html>
