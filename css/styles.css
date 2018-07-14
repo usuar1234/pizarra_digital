@@ -46,6 +46,14 @@ body
   filter: invert(1);
 }
 
+.icono img {
+  transition: .5s;
+}
+
+.icono img:hover {
+  transform: scale(1.2);
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -54,11 +62,17 @@ body
   padding: 30px;
 }
 
-h1 {
+.content a {
+  text-decoration: none;
   font-weight: 600;
   font-size: 28px;
   color: white;
   margin: 10px;
+  transition: .2s;
+}
+
+.content a:hover {
+  opacity: .5;
 }
 
 p {
