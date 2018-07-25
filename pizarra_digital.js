@@ -81,32 +81,82 @@ function colorLapiz()
 var color_fondo = document.getElementById('color_fondo');
 color_fondo.addEventListener('change', colorFondo);
 
+color_fondo.value = '#FFFFFF';
+
 function colorFondo()
 {
-  fondo = color_fondo.value;
-  var areaDibujo = document.getElementById("areaDibujo");
-  areaDibujo.style.backgroundColor = fondo;
+  var fondo = color_fondo.value;
+  canvas.style.backgroundColor = fondo;
 }
 
 var tamaño_lapiz = document.getElementById('tamaño_lapiz');
 tamaño_lapiz.addEventListener('change', tamañoLapiz)
 
-var tamaño = 1;
+var tamaño = '3';
 
 function tamañoLapiz()
 {
   tamaño = tamaño_lapiz.value;
 }
 
+var tamaño_lienzo = document.getElementById('tamaño_lienzo');
+tamaño_lienzo.addEventListener('change', tamañoLienzo);
+
+function tamañoLienzo(evento) {
+  if (tamaño_lienzo.value == 'defecto') {
+    papel.canvas.width = 900;
+    papel.canvas.height = 500;
+  }
+  if (tamaño_lienzo.value == 'pantalla') {
+    papel.canvas.width = 1080;
+    papel.canvas.height = 1920;
+  }
+  if (tamaño_lienzo.value == 'fb') {
+    papel.canvas.width = 851;
+    papel.canvas.height = 315;
+  }
+  if (tamaño_lienzo.value == '1:1') {
+    papel.canvas.width = 1024;
+    papel.canvas.height = 1024;
+  }
+  if (tamaño_lienzo.value == '4:3') {
+    papel.canvas.width = 1024;
+    papel.canvas.height = 768;
+  }
+  if (tamaño_lienzo.value == '3:2') {
+    papel.canvas.width = 1200;
+    papel.canvas.height = 800;
+  }
+  if (tamaño_lienzo.value == '16:9') {
+    papel.canvas.width = 1280;
+    papel.canvas.height = 720;
+  }
+
+  if (tamaño_lienzo.value == '5:4') {
+    papel.canvas.width = 1280;
+    papel.canvas.height = 1024;
+  }
+
+  if (tamaño_lienzo.value == 'personalizado') {
+    
+  }
+}
+
 var limpiar_lienzo = document.getElementById('limpiar_lienzo');
 limpiar_lienzo.addEventListener('click', limpiarLienzo)
 
-function limpiarLienzo(evento)
+function limpiarLienzo()
 {
   var bool = confirm('Seguro que desea limpiar todo?');
   if (bool)
   {
     papel.clearRect(0, 0, canvas.width, canvas.height);
+    color = '#000000';
+    color_lapiz.value = '#000000';
+    color_fondo.value = '#FFFFFF';
+    canvas.style.backgroundColor = '#FFFFFF';
+    tamaño_lapiz.value = '3';
+    tamaño = '3';
     alert('Se eliminó correctamente');
   }
 }
