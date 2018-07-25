@@ -13,22 +13,31 @@
       <input type="color" id="color_fondo">
       Tamaño 👉
       <select id="tamaño_lapiz">
-        <option value=1>1 px </option>
-        <option value=2>2px </option>
-        <option value=3>3px </option>
-        <option value=4>4px </option>
-        <option value=5>5px</option>
-        <option value=6>6px</option>
-        <option value=7>7px</option>
+        <option value=1> 1px </option>
+        <option value=2> 2px </option>
+        <option value=3 selected> 3px </option>
+        <option value=4> 4px </option>
+        <option value=5> 5px </option>
+        <option value=6> 6px </option>
+        <option value=7> 7px </option>
+      </select>
+      Tamaño Lienzo 👉
+      <select id="tamaño_lienzo">
+        <option value="defecto" selected> 900 x 500 (Por defecto) </option>
+        <option value="pantalla"> 1080 x 1920 (Pantalla) </option>
+        <option value="fb"> 851 x 315 (Portada de FB) </option>
+        <option value="1:1"> 1024 x 1024 (1:1) </option>
+        <option value="4:3"> 1024 x 768 (4:3) </option>
+        <option value="3:2"> 1200 x 800 (3:2) </option>
+        <option value="16:9"> 1280 x 720 (16:9) </option>
+        <option value="5:4"> 1280 x 1024 (5:4) </option>
+        <option value="personalizado"> Elegir Tamaño Personalizado </option>
       </select>
       <input type="button" value="Limpiar Todo" id="limpiar_lienzo">
     </div>
       <br>
     </p>
-    <div class="contenedorcanvas" align="center">
-      <canvas id="areaDibujo" width="950" height="500">Tu navegador no soprta canvas :(</canvas>
-    </div>
+    <canvas id="areaDibujo" width="950" height="500" align="center">Tu navegador no soprta canvas :(</canvas>
     <script src="pizarra_digital.js"></script>
-    <script src="http://localhost:35729/livereload.js"></script>
   </body>
 </html>
